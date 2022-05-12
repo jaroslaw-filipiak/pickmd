@@ -1,0 +1,88 @@
+@import "../../../../styles";
+
+.single-item-opinions {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .container {
+    background-color: map-get($colors, light);
+    @include borderRadius;
+    padding: 24px;
+  }
+
+  h3 {
+    color: map-get($colors , dark);
+    margin-bottom: 20px;
+  }
+
+  .opinions {
+
+    header {
+      display: flex;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+
+    main {
+      padding-left: 75px;
+      padding-top: 10px;
+      font-size: 12px;
+
+      @include lg {
+        max-width: 70%;
+      }
+    }
+
+    .opinion {
+
+      border-bottom: 1px solid map-get($colors , lightGray);
+      padding: 30px 0px;
+
+      &--name {
+        font-size: 16px;
+        font-weight: 600;
+        color: map-get($colors , dark);
+      }
+
+      &--rating {
+        margin-left: 20px;
+        background-color: map-get($colors , labelBG);
+        border-radius: 50px;
+        padding: 0px 10px;
+
+        img {
+          margin: 0px 2px;
+          position: relative;
+          top: -2px;
+        }
+      }
+
+      &--service ,
+      &--date {
+        font-size: 12px;
+      }
+
+      &--service {
+        padding-right: 5px;
+      }
+
+      &--actions {
+        padding-top: 15px;
+
+        .label {
+          cursor: pointer;
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+
+

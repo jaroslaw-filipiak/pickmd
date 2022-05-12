@@ -1,0 +1,47 @@
+@import "../../../styles";
+
+.services-item {
+  color: map-get($colors , gray);
+  background-color: map-get($colors , light);
+  border: 5px solid  map-get($colors , bodyBG);
+  font-size: 14px;
+  padding: 0;
+  border-radius: 20px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 23px;
+    border: 1px solid map-get($colors , lightGray);
+    @include borderRadius;
+
+    &:hover {
+      color: map-get($colors , gray);
+      border: 1px solid map-get($colors , main);
+    }
+  }
+
+  &:hover {
+
+    opacity: .8;
+
+    svg {
+      path {
+        stroke: map-get($colors , light)
+      }
+    }
+
+    .services-item--icon {
+      background-color: map-get($colors , main);
+    }
+  }
+
+  &--icon {
+    background-color:transparent;
+    border-radius: 50px;
+    width: 31px;
+    height: 31px;
+    @include flexCenter;
+  }
+}

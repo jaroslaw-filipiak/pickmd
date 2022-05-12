@@ -1,0 +1,13 @@
+@import "../../../styles";
+
+.seo-content {
+
+  ul li::before {
+    content: "\2022";
+    color: map-get($colors, main);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}

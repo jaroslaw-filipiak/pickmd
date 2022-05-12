@@ -1,0 +1,29 @@
+@import "../../../styles";
+
+.sidebar {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      border-bottom: 1px solid map-get($colors , lightGray);
+      border-left: 1px solid map-get($colors , lightGray);
+      border-right: 1px solid map-get($colors , lightGray);
+
+      @include lg {
+        border-right: none;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 10px 0px 10px 10px;
+
+    }
+
+    .active {
+      border-left: 2px solid map-get($colors ,main);
+    }
+  }
+}

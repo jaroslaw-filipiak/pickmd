@@ -1,0 +1,24 @@
+@import "../../../styles";
+
+.categories {
+
+  .category-item {
+    width: 170px;
+    height: 290px;
+    background-color: map-get($colors , light);
+    padding: 20px 10px 15px 10px;
+    margin-bottom: 33px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include borderRadius;
+
+    img {
+      position: absolute;
+      top: -20px;
+      @include borderRadius;
+    }
+
+  }
+}

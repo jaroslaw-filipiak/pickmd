@@ -1,0 +1,144 @@
+@import "../../../styles";
+
+.header {
+  background-color: map-get($colors , lightDark);
+  color: map-get($colors , light);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 22;
+
+
+  label {
+    position: relative;
+    img  {
+      position: absolute;
+      left: 25px;
+      top: 50%;
+      z-index: 2;
+      transform: translate(0, -50%);
+      display: none;
+      @include lg {
+        display: block;
+      }
+
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    @include lg {
+      padding: 17px 30px 17px 60px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  #service {
+    border-radius: 10px 0px 0px 10px;
+    position: relative;
+  }
+
+  .label-service {
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 1px;
+      height: 30px;
+      background-color: rgb(135 137 142 / 36%);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: block;
+      transform: translate(0 , -50%);
+    }
+
+  }
+  #localization {
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .login-register-btns {
+
+    &--wrapper {
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 25px;
+      padding-right: 25px;
+      @include lg {
+        background-color: map-get($colors , light);
+      }
+    }
+
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    li {
+      a {
+        color: map-get($colors , light);
+        position: relative;
+
+        @include lg {
+          padding-right: 10px;
+        }
+
+        &:hover {
+          color: map-get($colors , main);
+        }
+        &::after {
+
+          @include lg {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 80%;
+            background-color: map-get($colors , light);
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translate(0 , -50%);
+          }
+        }
+
+
+      }
+
+      &:last-child {
+
+        a {
+          &::after {
+            opacity: 0;
+          }
+        }
+      }
+
+    }
+  }
+
+
+}

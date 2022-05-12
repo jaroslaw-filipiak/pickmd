@@ -1,0 +1,75 @@
+@import "../../../../styles";
+
+.single-item-header {
+
+  &-col-1 {
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding-bottom: 60% !important;
+    margin-bottom: 10px;
+    @include lg{
+      padding-bottom: 24px !important;
+      margin-bottom: 0px;
+    }
+  }
+
+  &-col-1, &-col-2 {
+    background-color: map-get($colors , light);
+    @include borderRadius;
+    padding: 24px;
+  }
+
+  header {
+    padding: 24px 0px;
+  }
+
+  &--title {
+    font-size: 28px;
+    font-weight: 600;
+    color: map-get($colors , dark);
+    max-width: 230px;
+  }
+
+  &--address {
+    border-top: 1px solid rgba(189, 189, 189, 0.4);
+    border-bottom: 1px solid rgba(189, 189, 189, 0.4);
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &--socials {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin-bottom: 10px;
+
+        img {
+          margin-right: 10px;
+        }
+
+        a {
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+    }
+
+  }
+}

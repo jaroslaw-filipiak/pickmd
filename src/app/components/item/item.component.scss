@@ -1,0 +1,39 @@
+@import "../../../styles";
+
+.item {
+  @include borderRadius;
+  @include border;
+  padding: 20px 10px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  background-color: map-get($colors, light);
+  display: block;
+
+  &:hover {
+    opacity: .9;
+  }
+
+
+  &--bg {
+    backgroud-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    @include borderRadius;
+  }
+
+  &--content {
+    padding: 0px 20px;
+  }
+
+
+  &--title {
+    color: map-get($colors , dark)
+  }
+
+
+}
+

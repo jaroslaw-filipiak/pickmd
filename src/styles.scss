@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+
+$colors: (
+  bodyBG: #F0F0F0,
+  main: #87E1F9,
+  lightGray: #DFDFE6,
+  gray: #87898E,
+  light: #FFFFFF,
+  lighterDark: #333333,
+  lightDark: #161718,
+  dark: #000000,
+  labelBG: #F1F1F1,
+);
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin sm {
+  @media (min-width: map-get($grid-breakpoints , sm)) {
+  @content
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($grid-breakpoints , md)) {
+    @content
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($grid-breakpoints , lg)) {
+    @content
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($grid-breakpoints , xl)) {
+    @content
+  }
+}
+
+@mixin xxl {
+  @media (min-width: map-get($grid-breakpoints , xxl)) {
+    @content
+  }
+}
+
+@mixin textShadow {
+  text-shadow: 2px 2px 2px rgb(92 92 92 / 36%);
+}
+
+@mixin borderRadius {
+  border-radius: 10px;
+}
+
+@mixin border {
+  border: 1px solid map-get($colors , lightGray);
+}
+
+.bg-main{
+  background-color: map-get($colors , main);
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: map-get($colors , gray);
+  background-color: map-get($colors , bodyBG);
+}
+
+a {
+  text-decoration: none;
+  color: map-get($colors , gray);
+
+  &:hover {
+    color: map-get($colors , main);
+
+  }
+
+}
+
+.active {
+  color: map-get($colors , main);
+}
+
+//===========================================
+
+.label {
+  background-color: map-get($colors, labelBG);
+  color: map-get($colors, dark);
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 16px;
+  border-radius: 50px;
+  font-weight: 400;
+  margin-right: 10px;
+  @include borderRadius;
+
+  img {
+    margin-right: 5px;
+  }
+;
+}
+
+.btn-default {
+  background-color: map-get($colors, main);
+  color: map-get($colors, light);
+  border-radius:50px;
+  font-size: 14px;
+  padding: 6px 18px;
+  &:hover {
+    color: map-get($colors, light);
+    opacity: .8;
+  }
+}
+
+//======================================
+.simple-page--entry-content {
+  color: map-get($colors , dark);
+
+  @include lg {
+    border-left: 1px solid #e4dfdf;
+  }
+
+  h1, h2 , h3 , h4, h5 ,p {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+
+}
+

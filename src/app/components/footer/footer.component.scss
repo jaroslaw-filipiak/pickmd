@@ -1,0 +1,35 @@
+@import "../../../styles";
+
+.footer {
+  padding:20px 30px;
+  background-color: map-get($colors ,lightDark);
+
+  &-bottom {
+    background-color: map-get($colors ,lighterDark);
+  }
+
+  &-row-1 ,
+  &-row-2 {
+
+    a {
+      color: map-get($colors, light);
+      font-weight: 300;
+
+      &:hover {
+        color: map-get($colors, main);
+
+        img {
+          opacity: .9;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-row-2 {
+    border-top: 1px solid map-get($colors , gray);
+  }
+
+}

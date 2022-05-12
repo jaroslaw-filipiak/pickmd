@@ -1,0 +1,54 @@
+@import "../../../styles";
+
+.hero {
+  height: 60vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: map-get($colors , main);
+  @include flexCenter;
+
+  @media (max-width: map-get($grid-breakpoints , lg)) {
+    background-image: none !important;
+  }
+
+
+
+
+  h1 , h2 , h3 {
+   @include textShadow;
+  }
+
+  &--categories {
+    background-color: map-get($colors , light);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50% ,50%);
+    bottom: 0;
+    width: 100%;
+    @include border;
+    @include borderRadius;
+    @include flexCenter;
+    padding: 18px 30px;
+
+    ul {
+      @include flexCenter;
+
+      li {
+        padding: 0px 10px;
+        border-right: 1px solid;
+
+        &:last-child {
+          border: none;
+        }
+
+      }
+
+    }
+
+  }
+
+
+}

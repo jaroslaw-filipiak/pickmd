@@ -1,0 +1,51 @@
+@import "../../../styles";
+
+.localization-box {
+
+  &--inner {
+    color: map-get($colors , dark);
+    padding: 100px 60px;
+    flex-direction: column;
+    position: relative;
+    @include borderRadius;
+    @include flexCenter;
+  }
+
+  &--icon {
+    position: absolute;
+    top:0px;
+    transform: translate(0% , -50%);
+  }
+
+
+  &--wrapper {
+    margin: 80px auto;
+
+
+    .btn {
+      padding: 10px 30px;
+      border-radius: 50px;
+      color: map-get($colors , dark);
+
+      &-border {
+        border: 1px solid map-get($colors, dark);
+
+        &:hover {
+          border-style: dashed;
+        }
+      }
+
+      &-txt {
+        border: 1px dashed map-get($colors , main);
+        &:hover {
+          border: 1px dashed map-get($colors, dark);
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
